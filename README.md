@@ -1,4 +1,9 @@
 # Ubuntu 20.04 Workstation Setup
+
+## Introduction
+I use my GPU-enabled workstation to run data science, ML, and DL workflows using a large number of open-source packages/projects. This includes, but is not limited to, RAPIDS, PyTorch, TensorRT, TensorFlow, multiple visualization packages, and much of the PyData ecosystem. I primarily develop using Docker containers, so the minimalist approach to setup here reflects that. These instructions are manual. If you prefer something more automated, my colleague [Paul](https://github.com/trxcllnt) has a [repo that automates setup of a new Xubuntu install](https://github.com/trxcllnt/ubuntu-setup).
+
+## Setup Instructions
 1. Install [Ubuntu 20.04](https://ubuntu.com/download/desktop)
 
 2. Restart ([boot into recovery mode](https://wiki.ubuntu.com/RecoveryMode) if you’re having display issues)
@@ -169,3 +174,9 @@
 	# Install AWS CLI
 	sudo ./aws/install
 	```
+	
+## Optional Next Steps
+Sometimes (rarely these days) I might need multiple CUDA toolkit versions on the bare metal OS. For this latest install, I'm skipping this and going to try getting by with CUDA 11.x on the host OS while managing other CUDA toolkits via containers (if necessary). If you need multiple CUDA toolkit versions on your install, [Paul's script on how to configure this](https://github.com/trxcllnt/ubuntu-setup/blob/master/scripts/01-cuda.sh) is very useful.
+	
+## Acknowledgments
+I relied heavily on [Paul's Xubuntu bootstrap scripts](https://github.com/trxcllnt/ubuntu-setup) to help make this simple walkthrough.
