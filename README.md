@@ -27,7 +27,7 @@ I use my GPU-enabled workstation to run data science, ML, and DL workflows using
 	```
 	
 5. Install and configure SSH
-	1. Install ZSH
+	1. Install SSH
 
 		```
 		sudo apt install openssh-server
